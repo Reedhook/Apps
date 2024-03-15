@@ -1,0 +1,66 @@
+@import url('icons.css');
+html, body{
+    margin:0;
+    padding: 0;
+}
+.text-danger {
+    color: red;
+    border: 1px solid #dc3545; /* Цвет рамки для сообщения об ошибке */
+    background-color: #f8d7da; /* Цвет фона для сообщения об ошибке */
+    padding: 5px; /* внутренний отступ для сообщения об ошибке */
+    margin-top: 5px; /* Отступ све��ху для сообщения об ошибке */
+    margin-bottom: 5px;
+}
+a {
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+}
+table{
+    text-align: center;
+}
+
+ul {
+    padding: 0;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.customForm{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.customBorder {
+    border: 1px solid #ced4da; /* Толщина, тип и цвет границы */
+    border-radius: 10px; /* Радиус закругления углов */
+}
+
+.showForm {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px; /* задаем закругление граней формы */
+    z-index: 999;
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+    animation-name: fadeIn;
+}
+
+.showForm.open {
+    display: block;
+}
+

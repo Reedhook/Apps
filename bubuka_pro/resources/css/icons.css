@@ -1,0 +1,66 @@
+/* Задаем общий стиль для элементов с подсказкой*/
+#admin, #add_date, #watch_list, #info, #edit, #trash, #add_platform, #delete_platform, #add_user, #delete_user, #download {
+    position: relative;
+    cursor: pointer;
+    text-decoration: underline dashed 1px;
+}
+
+
+/* Задаем общий стиль всплывающей подсказки для нужных элементов*/
+#admin:hover:before, #watch_list:hover:before, #add_date:hover:before, #info:hover:before, #edit:hover:before, #download:hover:before, #trash:hover:before, #add_platform:hover:before, #delete_platform:hover:before, #add_user:hover:before, #delete_user:hover:before {
+    position: absolute;
+    width: auto; /* Увеличьте ширину бокса при наведении */
+    color: #fff;
+    padding: 5px;
+    border-radius: 4px;
+    left: 50px;
+    font-size: 16px; /* Уменьшите размер шрифта, если текст не помещается */
+    /* Установить цвет фона бокса */
+    background: black;
+}
+
+#download:hover:before{
+content:'Скачать';
+}
+
+/* Добавляем текст в конкретной всплывающей подсказке */
+#admin:hover:before {
+    content: "Только для админа";
+}
+
+#watch_list:hover:before {
+    content: "Просмотр";
+}
+
+#add_date:hover:before {
+    content: "Создать";
+}
+
+#info:hover:before {
+
+    content: "Подбробнее";
+}
+
+#edit:hover:before {
+    content: "Изменить"
+}
+
+#trash:hover:before {
+    content: "Удалить"
+}
+
+#add_platform:hover:before {
+    content: "Добавить платформу"
+}
+
+#delete_platform:hover:before {
+    content: "Удалить платформу"
+}
+
+#add_user:hover:before {
+    content: "Добавить пользователя"
+}
+
+#delete_user:hover:before {
+    content: "Исключить пользователя"
+}
